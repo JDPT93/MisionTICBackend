@@ -19,8 +19,8 @@ public class UserData {
 
     private int id;
 
-    @NotBlank(message = "Fullname is required")
-    private String fullname;
+    @NotBlank(message = "FullName is required")
+    private String FullName;
 
     @Email(message = "Email is required")
     private String email;

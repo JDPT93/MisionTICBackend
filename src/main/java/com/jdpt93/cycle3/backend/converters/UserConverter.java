@@ -9,7 +9,7 @@ public class UserConverter extends Converter<User, UserData> {
     public User toEntity(UserData object) {
         return User.builder()
                 .id(object.getId())
-                .fullname(object.getFullname())
+                .FullName(object.getFullName())
                 .email(object.getEmail())
                 .nickname(object.getNickname())
                 .password(object.getPassword())
@@ -20,7 +20,7 @@ public class UserConverter extends Converter<User, UserData> {
     public UserData toData(User object) {
         return UserData.builder()
                 .id(object.getId())
-                .fullname(object.getFullname())
+                .FullName(object.getFullName())
                 .email(object.getEmail())
                 .nickname(object.getNickname())
                 .password(null)
