@@ -22,7 +22,8 @@ public class UserData {
     @NotBlank(message = "Full name is required")
     private String FullName;
 
-    @Email(message = "Email is required")
+    @NotBlank(message = "Email is required")
+    @Email(message = "Email is invalid")
     private String email;
 
     @Pattern(regexp = AuthenticationData.NICKNAME_PATTERN, message = AuthenticationData.NICKNAME_ERROR)
