@@ -17,7 +17,7 @@ public class TeamData {
 
     private int id;
 
-    @NotBlank
+    @NotBlank(message = "Name is required")
     private String name;
 
 }

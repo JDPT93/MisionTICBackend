@@ -16,10 +16,10 @@ import lombok.Setter;
 @AllArgsConstructor
 public class AuthorizationData {
 
-    @NotNull
+    @NotNull(message = "User is required")
     private UserData user;
 
-    @NotBlank
+    @NotBlank(message = "Token is required")
     private String token;
 
 }

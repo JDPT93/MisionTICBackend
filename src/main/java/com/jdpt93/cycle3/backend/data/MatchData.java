@@ -4,9 +4,6 @@ import java.util.Date;
 
 import javax.validation.constraints.NotNull;
 
-import com.jdpt93.cycle3.backend.entities.Team;
-import com.jdpt93.cycle3.backend.entities.User;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -22,16 +19,16 @@ public class MatchData {
 
     private int id;
 
-    @NotNull
-    private User user;
+    @NotNull(message = "User is required")
+    private UserData user;
 
-    @NotNull
-    private Team localTeam;
+    @NotNull(message = "Local Team is required")
+    private TeamData localTeam;
 
-    @NotNull
-    private Team guestTeam;
+    @NotNull(message = "Guest Team is Required")
+    private TeamData guestTeam;
 
-    @NotNull
+    @NotNull(message = "Date is required")
     private Date date;
 
     private int localGoals;

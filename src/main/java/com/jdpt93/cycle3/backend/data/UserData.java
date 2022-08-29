@@ -19,10 +19,10 @@ public class UserData {
 
     private int id;
 
-    @NotBlank
+    @NotBlank(message = "Fullname is required")
     private String fullname;
 
-    @Email
+    @Email(message = "Email is required")
     private String email;
 
     @Pattern(regexp = AuthenticationData.NICKNAME_PATTERN, message = AuthenticationData.NICKNAME_ERROR)
