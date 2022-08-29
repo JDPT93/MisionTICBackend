@@ -19,7 +19,7 @@ public class UserData {
 
     private int id;
 
-    @NotBlank(message = "FullName is required")
+    @NotBlank(message = "Full name is required")
     private String FullName;
 
     @Email(message = "Email is required")
