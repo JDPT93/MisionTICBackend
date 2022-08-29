@@ -1,5 +1,6 @@
 package com.jdpt93.cycle3.backend.config;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.boot.web.error.ErrorAttributeOptions;
@@ -48,8 +49,13 @@ public class ErrorHandlingConfig extends ResponseEntityExceptionHandler {
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException exception,
             HttpHeaders headers, HttpStatus status, WebRequest request) {
         log.error(exception.toString(), exception);
+        List<String> messages = exception.getAllErrors().stream().map(ObjectError::getDefaultMessage).toList();
         return getErrorResponse(status, request,
-                exception.getAllErrors().stream().map(ObjectError::getDefaultMessage).toList());
+                messages.size() == 0
+                        ? null
+                        : messages.size() == 1
+                                ? messages.get(0)
+                                : messages);
     }
 
 }

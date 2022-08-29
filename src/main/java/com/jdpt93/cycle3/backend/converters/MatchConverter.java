@@ -11,10 +11,10 @@ public class MatchConverter extends Converter<Match, MatchData> {
                 .id(object.getId())
                 .user(object.getUser())
                 .localTeam(object.getLocalTeam())
-                .localTeam(object.getGuestTeam())
+                .guestTeam(object.getGuestTeam())
                 .date(object.getDate())
                 .localGoals(object.getLocalGoals())
-                .localGoals(object.getGuestGoals())
+                .guestGoals(object.getGuestGoals())
                 .build();
     }
 
@@ -24,10 +24,10 @@ public class MatchConverter extends Converter<Match, MatchData> {
                 .id(object.getId())
                 .user(object.getUser())
                 .localTeam(object.getLocalTeam())
-                .localTeam(object.getGuestTeam())
+                .guestTeam(object.getGuestTeam())
                 .date(object.getDate())
                 .localGoals(object.getLocalGoals())
-                .localGoals(object.getGuestGoals())
+                .guestGoals(object.getGuestGoals())
                 .build();
     }
 
