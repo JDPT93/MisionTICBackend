@@ -31,8 +31,8 @@ public class MatchData {
     @NotNull(message = "Date is required")
     private Date date;
 
-    private int localGoals;
+    private int localTeamGoals;
 
-    private int guestGoals;
+    private int guestTeamGoals;
 
 }

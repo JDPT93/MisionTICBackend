@@ -46,9 +46,9 @@ public class Match {
     private Date date;
 
     @Column(name = "goles_local", nullable = false)
-    private int localGoals;
+    private int localTeamGoals;
 
     @Column(name = "goles_visitante", nullable = false)
-    private int guestGoals;
+    private int guestTeamGoals;
 
 }

@@ -16,8 +16,8 @@ public class MatchConverter extends Converter<Match, MatchData> {
                 .localTeam(teamConverter.toEntity(object.getLocalTeam()))
                 .guestTeam(teamConverter.toEntity(object.getGuestTeam()))
                 .date(object.getDate())
-                .localGoals(object.getLocalGoals())
-                .guestGoals(object.getGuestGoals())
+                .localTeamGoals(object.getLocalTeamGoals())
+                .guestTeamGoals(object.getGuestTeamGoals())
                 .build();
     }
 
@@ -29,8 +29,8 @@ public class MatchConverter extends Converter<Match, MatchData> {
                 .localTeam(teamConverter.toData(object.getLocalTeam()))
                 .guestTeam(teamConverter.toData(object.getGuestTeam()))
                 .date(object.getDate())
-                .localGoals(object.getLocalGoals())
-                .guestGoals(object.getGuestGoals())
+                .localTeamGoals(object.getLocalTeamGoals())
+                .guestTeamGoals(object.getGuestTeamGoals())
                 .build();
     }
 
